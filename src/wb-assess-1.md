@@ -242,7 +242,7 @@ Write a short description of the following data types:
 **_String_**
 
 ```
-A string is a datatype that stores a group of charecters who are associated by pointers in memory. 
+A string is a datatype that stores a group of charecters who are associated by pointers in memory. A string can be as simple as a single charecter or word. It can also be groups of words/ charecters. "3" = string 3 = number. Depending on how you write you variables, the compiler will either treat it as a string or a number. Numbers can't be treated as strings and viseversa.
 ```
 
 **_Number_**
