@@ -23,7 +23,7 @@ function average(x, y) {
 //   approximatelyEqual(10.001, 10);
 //   => true
 function approximatelyEqual(x, y) {
-  if (x == y) {
+  if (Number.parseFloat(x).toFixed(2) === Number.parseFloat(y).toFixed(2)) {
     return true;
   } else {
     return false;
@@ -34,26 +34,36 @@ function approximatelyEqual(x, y) {
 // Ex.:
 //   fullName('John', 'Doe');
 //   => 'John Doe'
-function fullName(firstName, lastName) {}
+function fullName(firstName, lastName) {
+  let greet = `${firstName} ${lastName}`;
+  return greet;
+}
 
 // Generate the sentence "PERSON was drinking BEVERAGE at LOCATION" using the
 // person, beverage and location provided.
 // Ex.:
 //   generateSentence('Kay', 'coffee', 'the local cafe');
 //   => 'Kay was drinking coffee at the local cafe.'
-function generateSentence(person, beverage, location) {}
+function generateSentence(person, beverage, location) {
+  let greet = `${person} was drinking ${beverage} at ${location}.`
+  return greet;
+}
 
 // Return the given string with all vowels replced with '*' characters.
 // Ex.:
 //   censorVowels('javascript');
 //   => 'j*v*scr*pt'
-function censorVowels(string) {}
+function censorVowels(string) {
+  return string.replace(/[aeiou]/gi, '*')
+}
 
 // Return the given string in sticky case.
 // Ex.:
 //   stickyCase('hello world');
 //   => 'hElLo wOrLd'
-function stickyCase(string) {}
+function stickyCase(string) {
+  return string.split('').map((x, i) => i % 2 == 0 ? x.toLowerCase() : x.toUpperCase()).join('');
+}
 
 // Return the given string in leetspeak. Leetspeak is a modified version of
 // English where characters are replaced by numbers or symbols. For this
@@ -67,7 +77,32 @@ function stickyCase(string) {}
 // Ex.:
 //   leetspeak('javascript');
 //   => 'j4v45cr1p7'
-function leetspeak(string) {}
+function leetspeak(string) {
+	
+  let leetString = "";
+  
+  for (let i= 0; i < string.length; i++) {
+  
+  let char = string[i];
+  
+	if (char === 'a') {
+    leetString += '4';
+	} else if (char === 'e') {
+    leetString += '3';
+  } else if (char === 'i') {
+    leetString += '1';
+	} else if (char === 'o') {
+		leetString += '0';
+	} else if (char === 's') {
+		leetString += '5';
+	} else if (char === 't') {
+		leetString += '7';
+	} else {
+		leetString += string[i];
+	}
+}
+	return leetString;
+}
 
 export {
   approximatelyEqual,
