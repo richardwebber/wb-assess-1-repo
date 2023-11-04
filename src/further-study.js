@@ -8,6 +8,15 @@
 //   => ['zoo', 'space']
 function commonStrings(array1, array2) {
     
+    let bothArraysHaveWords = [];
+
+    for (let i of array1) {
+        if (array2.includes(i)) {
+            array1.pop(i);
+            bothArraysHaveWords.push(i);
+        }
+    }
+    return bothArraysHaveWords;
 }
 
 // Given three numbers, return a list of numbers from 1 to 100 that are

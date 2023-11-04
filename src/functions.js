@@ -81,7 +81,7 @@ function leetspeak(string) {
 	
   let leetString = "";
   
-  for (let i= 0; i < string.length; i++) {
+  for (let i = 0; i < string.length; i++) {
   
   let char = string[i];
   
