@@ -9,10 +9,11 @@
 function commonStrings(array1, array2) {
     
     let bothArraysHaveWords = [];
+    let manipulatedArray1 = array1;
 
-    for (let i of array1) {
+    for (let i of manipulatedArray1) {
         if (array2.includes(i)) {
-            array1.pop(i);
+            manipulatedArray1.pop(i);
             bothArraysHaveWords.push(i);
         }
     }
